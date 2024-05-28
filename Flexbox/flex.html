@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        font-family: 'Poppins', sans-serif;
+        }
+        #nav {
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: black;
+            z-index: 1000;
+            top:0;
+            left:0;
+            width: 100%;
+            box-sizing: border-box;
+            border-width: 10px;
+            border-style: solid;
+        }
+        #links{
+            display: flex;
+            gap: 1em;
+            
+        }
+        a{
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 120px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid transparent;
+            transition: border-color 0.5s, padding 0.5s;
+        }
+        
+        a:hover{
+            border-color: white;
+            border-style: solid;
+        }
+        #logo{
+            padding-left: 25px;
+            font-size: 1.5em;
+            color: white;
+            font-weight: bolder;
+        }
+        .courses{
+            display: flex;
+            flex-direction: column;
+            border: 1px black solid;
+            border-radius: 25px;
+            overflow: hidden;
+            width:350px;
+            height:560px;
+            transition: transform 0.3s;
+            box-shadow: 0 0 0 transparent   ;
+        }
+        .courses img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .courses:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px grey;
+        }
+        #container{
+
+            padding-top: 120px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .body{
+            align-items: left;
+            
+        }
+        h2{
+            text-align: center;
+        }
+        .cont{
+            display: flex;
+            justify-content: center;
+        }
+        #subbut{
+            background-color: aquamarine;
+            padding: 1em;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+        }
+        #subbut:hover{
+            box-shadow: 1px 2px 5px hsl(160, 92%, 29%);
+        }
+        @media (max-width:1150px) {
+            #container{
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 25px;
+            }
+        }
+        @media (max-width:860px){
+            #links{
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+</head>
+<body>
+    <div id="nav">
+    <div id="logo">
+    GHOST{CODE}®
+    </div>
+    <div id ="links">
+    <a href="#">Home</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Careers</a>
+    <a href="#">About Us</a>
+    </div>
+    </div>
+    <div id="container">
+    <div class="courses">
+        <div id = "coverpic">
+            <img src="img/dsa.jpg" alt="">
+        </div>
+        <h2>Data Structures</h2>
+        <div class = "body">
+            <ul>
+                <li>Array, queues, stacks, linked lists</li><br>
+                <li>Sorting and Searching algorithms</li><br>
+                <li>Pre-recorded in depth lectures </li><br>
+                <li>Live sessions for doubts </li><br>
+                <li>Quizzes after every module</li>
+            </ul>
+            <div class="cont">
+                <input type="button" value="Add to Cart" id = "subbut" class="button">
+                </div>
+        </div>
+    </div>
+    <div class="courses">
+        <div id = "coverpic">
+            <img src="img/ai.jpg" alt="">
+        </div>
+        <h2>Machine Learning</h2>
+        <div class = "body">
+            <ul>
+                <li>Supervised & Unsupervised models</li><br>
+                <li>Clustering and Classification</li><br>
+                <li>Pre-recorded in depth lectures </li><br>
+                <li>Live sessions for doubts </li><br>
+                <li>Quizzes after every module</li>
+    
+            </ul>
+            <div class="cont">
+                <input type="button" value="Add to Cart" id = "subbut" class="button">
+                </div>
+        </div>
+    </div>
+    <div class="courses">
+        <div id = "coverpic">
+            <img src="img/web.jpg" alt="">
+        </div>
+        <h2>Web Development</h2>
+        <div class = "body">
+            <ul>
+                <li>HTML, CSS, JavaScript, MongoDB</li><br>
+                <li>Node.JS and React.JS Libraries</li><br>
+                <li>Pre-recorded in depth lectures </li><br>
+                <li>Live sessions for doubts </li><br>
+                <li>Quizzes after every module</li>
+            </ul>
+            <div class="cont">
+            <input type="button" value="Add to Cart" id = "subbut" class="button">
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
