@@ -26,7 +26,6 @@
         #links{
             display: flex;
             gap: 1em;
-            
         }
         a{
             color: white;
@@ -58,7 +57,7 @@
             width:350px;
             height:560px;
             transition: transform 0.3s;
-            box-shadow: 0 0 0 transparent   ;
+            box-shadow: 0 0 0 transparent;
         }
         .courses img{
             max-width: 100%;
@@ -70,10 +69,13 @@
             box-shadow: 0px 4px 8px grey;
         }
         #container{
-
             padding-top: 120px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
+            padding-left:25px;
+            padding-right:25px;
+            gap:25px;
         }
         .body{
             align-items: left;
@@ -97,14 +99,6 @@
         #subbut:hover{
             transform: scale(1.05);
             box-shadow: 1px 2px 5px hsl(160, 92%, 29%);
-        }
-        @media (max-width:1150px) {
-            #container{
-                align-items: center;
-                flex-direction: column;
-                justify-content: space-around;
-                gap: 25px;
-            }
         }
         @media (max-width:860px){
             #links{
