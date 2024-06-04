@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #o {
+            transition-duration: 500ms;
+        }
+        .transformed {
+            transform: rotate(45deg) translate(50px, 100px) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="a">Hover over me</div>
+    <div id="o">Transform me</div>
+
+    <script>
+        document.getElementById('a').addEventListener('mouseenter', function() {
+            document.getElementById('o').classList.add('transformed');
+        });
+
+        document.getElementById('a').addEventListener('mouseleave', function() {
+            document.getElementById('o').classList.remove('transformed');
+        });
+    </script>
+</body>
+</html>

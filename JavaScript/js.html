@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(grey,black);
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white
+        }
+        #MainWindow{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="MainWindow">
+    <div id="firstname"></div>
+    <button onclick="handleClick();handleSize();handleColor();handleGradient()">Click</button>
+    <div class="slide">
+        Message controls
+
+        <input type="range" min="1" max="100" value="50" class="slider" id="size">
+        <input type="color"  value="#131313"  id="col">
+
+    </div>
+    <div class="gradient-controls">
+        Background controls
+        <input type="color" value="#808080" id="g1">
+        <input type="color" value="#000000" id="g2">
+    </div>
+</div>
+    <script>
+    console.log("hello");
+    let firstname = document.getElementById("firstname");
+    let fontSize = document.getElementById("size");
+    let fontColor = document.getElementById("col");
+    let gradColor1 = document.getElementById("g1");
+        let gradColor2 = document.getElementById("g2");
+    firstname.innerHTML = "Hello World";
+    function handleClick(){
+        firstname.innerHTML = "MESSAGE";
+    }
+    function handleSize(){
+        firstname.style.fontSize = fontSize.value+"px";
+    }
+    function handleColor(){
+        firstname.style.color = fontColor.value;
+    }
+    function handleGradient() {
+            document.body.style.background = `linear-gradient(${g1.value}, ${g2.value})`;
+        }
+    </script>
+</body>
+</html>

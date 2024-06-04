@@ -1,0 +1,48 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            body{
+                background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+                height:100vh;
+            }
+
+            #box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #o{
+                transition-duration: 1000ms;
+            }
+            #o:hover{
+                animation-name: animOrange;
+                animation-duration: 1000ms;
+            }
+            @keyframes animOrange {
+                from{
+                    transform: translate(0px,0px) rotate(0deg);
+                }
+                25%{
+                    transform: translate(-50px,-200px) rotate(15deg);
+                }
+                to{
+                    transform: translate(-200px,-300px) rotate(60deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img src="bottle.png" alt="" id="bottle">
+        <img src="orange.png" alt="" width="200px" id="o">
+        <img src="apple.png" alt="" width="250px" id="a">
+        <img src="mango.png" alt="" width="200px" id="m">
+
+        <div id="box">
+            Welcome!
+        </div>
+    </body>
+</html>
